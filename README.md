@@ -28,4 +28,4 @@ $ rspec
 
 
 - Virtus used to add ActiveModel like functionality to POROs. (Initialization from hash, Type coercion)
-- Due to time constraints, spec coverage is limited - Please see http://robj.github.io for a fuller example of TDD
+- Due to time constraints, spec coverage is limited - Please see http://robj.github.io for a better example of TDD
