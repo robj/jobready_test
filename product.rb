@@ -15,14 +15,14 @@ class Product
   end 
 
 
-  def is_tax_exempt?
+  def is_sales_tax_exempt?
     return true if (self.name =~ /book/) || (self.name =~ /pills/) || (self.name =~ /chocolate/)
     false
   end
 
 
   def sales_tax
-     self.is_tax_exempt?  ? 0.0 : (self.price * SALES_TAX_RATE)
+     self.is_sales_tax_exempt?  ? 0.0 : (self.price * SALES_TAX_RATE)
   end
 
 
