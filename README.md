@@ -1,6 +1,4 @@
+Usage
+
 gem install virtus
-
-
-test
-
-- prints total with padding (10.5)
+./register.rb test_input.csv

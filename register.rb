@@ -9,7 +9,6 @@ require './transaction.rb'
 
 
 
-
 if __FILE__==$0
 
     csv_pathname = ARGV[0]
