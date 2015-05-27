@@ -9,7 +9,7 @@ Ensure the Virtus Gem is installed (https://github.com/solnic/virtus)
 $ gem install virtus
 ```
 
-Print Receipt (Input: CSV file, Outout: STDOUT)
+Print Receipt (Input: CSV file, Output: STDOUT)
 
 ```bash
 $ ./register.rb test_input.csv
