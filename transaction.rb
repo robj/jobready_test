@@ -5,14 +5,14 @@ class Transaction
     attr_accessor :line_items 
 
 
-    def parse_line_items_from_csv(pathanme)
+    def parse_line_items_from_csv(pathname)
 
            @line_items = []
 
 
             options = {:encoding => 'UTF-8', :skip_blanks => true}
 
-            CSV.foreach(pathanme, options).each_with_index do |row, row_index|
+            CSV.foreach(pathname, options).each_with_index do |row, row_index|
 
                #first row is a header
                unless row_index == 0
