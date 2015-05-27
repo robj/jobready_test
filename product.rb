@@ -2,12 +2,13 @@ class Product
 
   include Virtus.model(:strict => true)
 
-  SALES_TAX_RATE =  0.10
-  IMPORT_DUTY_TAX_RATE = 0.05
-  ROUND_TO_NEAREST_AMOUNT_IN_DOLLAR = 0.05
+  SALES_TAX_RATE =  BigDecimal('0.10')
+  IMPORT_DUTY_TAX_RATE = BigDecimal('0.05')
+  ROUND_TO_NEAREST_AMOUNT_IN_DOLLAR = BigDecimal('0.05')
+  ZERO = BigDecimal('0.0')
 
   attribute :name, String
-  attribute :price, Float
+  attribute :price, BigDecimal
 
 
   def is_imported?
@@ -22,12 +23,12 @@ class Product
 
 
   def sales_tax
-     self.is_sales_tax_exempt?  ? 0.0 : (self.price * SALES_TAX_RATE)
+     self.is_sales_tax_exempt?  ? ZERO : (self.price * SALES_TAX_RATE)
   end
 
 
   def import_duty_tax
-     self.is_imported? ? (self.price * IMPORT_DUTY_TAX_RATE) : 0.0
+     self.is_imported? ? (self.price * IMPORT_DUTY_TAX_RATE) : ZERO
   end
 
 
